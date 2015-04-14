@@ -1,0 +1,8 @@
+<div ng-controller="ArtikellisteCtrl as vm">
+    <h1>Artikelliste</h1>
+    <p ng-repeat="artikel in vm.artikel | orderBy:'bezeichnung'">
+        <a ng-href="#/artikel/{{artikel.artikelnummer}}">{{artikel.artikelnummer}}</a>
+        <strong>{{artikel.bezeichnung}}</strong>
+        {{artikel.preis | currency:'€':2}}
+    </p>
+</div>
